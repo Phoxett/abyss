@@ -26,7 +26,7 @@ gulp.task('del-css', () =>
 gulp.task('watch-sass', () =>
 {
     livereload.listen()
-    gulp.watch(['src', 'src/src', 'src/src/data', 'src/src/sass', 'src/src/css', 'src/src/hbs', 'src/src/hbs/parts'], gulp.series(['del-css', 'build-sass', 'start'])
+    gulp.watch(['src', 'src/src', 'src/src/data', 'src/src/sass', 'src/src/css', 'src/src/hbs', 'src/src/hbs/parts'], gulp.series(['del-css', 'build-sass', 'start']))
 })
 
 gulp.task('start', function(done)
