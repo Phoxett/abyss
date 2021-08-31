@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/phoxett/abyss/issues"
   },
-  "homepage": "https://github.com/phoxett/abyss#readme"
+  "homepage": "https://github.com/phoxett/abyss#readme",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  }
 }
