@@ -1,0 +1,10 @@
+{
+    "tab_size": 4,
+    "indent_char": " ",
+    "break_chained_methods": true,
+    "end_with_newline": true,
+    "max_preserve_newlines": 2,
+    "preserve_newlines": true,
+    "newline_between_rules":true,
+    "brace_style":"expand"
+}

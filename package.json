@@ -19,5 +19,10 @@
   "devDependencies": {
     "express": "^4.17.1",
     "hbs": "^4.1.2"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-nodemon": "^2.5.0",
+    "gulp-sass": "^5.0.0"
   }
 }
