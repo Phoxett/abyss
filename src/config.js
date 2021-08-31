@@ -18,6 +18,8 @@ app.engine('html', require('hbs').__express)
 app.set('/css', express.static(path.join(__dirname, '/src/css')))
 app.set('/data/', express.static(path.join(__dirname, '/src/data')))
 app.set(express.static(path.join(__dirname, '/src/hbs')))
+app.set('view', path.join(__dirname, 'src/hbs'))
 
+app.use('/', routes['index'])
 
-
+module.exports = app
