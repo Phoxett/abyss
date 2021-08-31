@@ -1,7 +1,15 @@
-.abyss {
+.abyss-h1 {
   color: #000000;
   opacity: 0.8 !important;
   font-size: 40px;
-  font-family: "Righteous", cursive;
+  font-family: 'Righteous', cursive;
   margin-left: 20px;
+}
+
+.abyss-navbar {
+  background: #77C66E !important;
+}
+
+.abyss-download {
+  border-radius: 10px !important;
 }

@@ -1,9 +1,8 @@
 
-@import "variable.scss";
+@import "variables";
 
 
 .abyss-h1
-
 {
     color: #000000;
     opacity: 0.8 !important;
@@ -14,5 +13,10 @@
 
 .abyss-navbar
 {
-    background-color: $base-colour !important;
+    background: $base-colour !important;
+}
+
+.abyss-download
+{
+    border-radius: 10px !important;
 }
