@@ -1,13 +1,13 @@
 'use strict'
 
 
-const indexRoute = require('./app/index')
+const indexRoute = require('./src/index')
 
 
 
 const routes = 
 {
-    '/': indexRoute   
+    'index': indexRoute
 }
 
 

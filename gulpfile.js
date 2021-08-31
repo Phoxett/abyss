@@ -3,13 +3,17 @@
 const gulp = require('gulp')
 const sass = require('gulp-sass')
 const del = require('del')
+const nodemon = require('gulp-nodemon')
+const livereload = require('gulp-livereload')
+const path = require('path')
 
 gulp.task('build-sass', () =>
 {
-    return gulp.src('src/src/sass/*.scss')
+    return gulp.src(path.join(__dirname, '/src/src/sass/*.scss'))
         .pipe(sass()
             .on('error', sass.logError))
-        .pipe(gulp.dest('src/src/css/'))
+        .pipe(gulp.dest('src/src/css'))
+        .pipe(livereload())
 })
 
 gulp.task('del-css', () =>
@@ -19,11 +23,12 @@ gulp.task('del-css', () =>
     ])
 })
 
-gulp.task('watch', () =>
+gulp.task('watch-sass', () =>
 {
-    gulp.watch('src/src/sass/*.scss', (done) =>
+    livereload.listen()
+    gulp.watch(['*', 'src', 'src/src', 'src/src/sass', 'src/src/css', 'src/src/hbs', 'src/src/parts'], (done) =>
     {
-        gulp.series(['del-css', 'build-sass'])(done)
+        gulp.series(['start', 'del-css', 'build-sass'])(done)
     })
 })
 
@@ -37,8 +42,10 @@ gulp.task('start', function(done)
         {
             'NODE_ENV': 'development'
         },
-        done: done
+        watch: ['src', 'src/src', 'src/src/sass', 'src/src/css', 'src/src/hbs', 'src/src/parts', '/../node_modules/uikit/dist/js', '/../node_modules/uikit/dist/css'],
+        done: done,
+        stdout: true
     })
 })
 
-gulp.task('default', gulp.series([ 'del-css', 'watch-sass', 'start']))
+gulp.task('default', gulp.series(['start', 'del-css', 'watch-sass']))
