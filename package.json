@@ -1,0 +1,19 @@
+{
+  "name": "abyss",
+  "version": "0.0.1",
+  "description": "abyss tool website",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phoxett/abyss.git"
+  },
+  "author": "Phoxett Phoxett",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/phoxett/abyss/issues"
+  },
+  "homepage": "https://github.com/phoxett/abyss#readme"
+}
